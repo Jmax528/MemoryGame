@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+.board {
+    width: 640px;
+    /* height: 640px; */
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    background-color: rgb(106, 105, 105);
+    perspective: 1000px;
+}
+
+.memory {
+    width: calc(25% - 10px);
+    height: calc(33.33% - 10px);
+    position: relative;
+    margin: 5px;
+    background-color: bisque;
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: orange;
+    border: 2px solid rgb(246, 174, 115);
+    backface-visibility: hidden;
+}
+
+
+

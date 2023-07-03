@@ -1,0 +1,36 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+a:link {
+    text-decoration: none;
+    text-align: center;
+}
+
+.grid-container {
+    display: flex;
+    margin: auto; 
+    justify-content: space-evenly;
+    background-color: rgb(106, 105, 105);
+}
+
+.memory, .TTT, .snake, .description {
+    width: calc(25% - 10px);
+    position: relative;
+    margin: 5px;
+    background-color: bisque;
+}
+
+.description {
+    display: flex;
+}
+
+.buttons {
+    display: block;
+}
