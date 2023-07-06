@@ -11,11 +11,12 @@
     <script defer src="../../dev/js/game.js"></script>
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <h2 class="navbar-brand">Sleepless Games Memory</a>
+            <h2 class="navbar-brand">Sleepless Games Memory</h2>
             <div class="buttons">
-                <a class="buttonHome" href="../index.html" >
-                    <button class="homeButton">Home</button>
+                <a class="buttonHome" href="../index.php" >
+                    <button id="homeButton">Home</button>
                 </a>
+                <?php require '../php/session.php'; logout2(); ?>
             </div>
           </nav>
 </head>
@@ -107,5 +108,6 @@
                 <img class="back" src="../img/card_10.png">
             </section>
     </div>
+    <?php session(); ?>
 </body>
 </html>

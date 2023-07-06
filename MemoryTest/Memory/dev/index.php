@@ -8,30 +8,24 @@
     <link rel="stylesheet" href="../design/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script defer src="../design/js/form.js"></script>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <h2 class="navbar-brand">Sleepless Games</h2>
         <div class="buttons">
-            <a class="button1" href="./pages/login.html" >
-            <!-- onclick="openForm()"> -->
-                <button class="loginButton" >Login</button>
+            <?php require '../dev/php/session.php';logout(); ?>
+            <a class="button1" href="pages/loginPage.php" >
+                <button id="loginButton">Login</button>
             </a>
-            <!-- needs to disapear if logged in -->
-            <a class="button2" href="./pages/register.html">
-                <button class="registerButton">Register</button>
+            <a class="button2" href="pages/registerPage.php">
+                <button id="registerButton">Register</button>
             </a>
-            <!-- needs to appear when logged in only,pressing it will log you out
-            <a class="button2" href="#">
-                <button class="registerButton">Logout</button>
-            </a> -->
         </div>
       </nav>
 </head>
 <body>
     <div class="grid-container">
-        <a class="memory" href="./pages/memory.html"> 
-            <section class="memory" data-game="Memory">
+        <a class="memory" href="<?php echo isset($_SESSION["username"]) ? './pages/memory.php' : 'javascript:void(0)'; ?>"  >
+            <section id="memory" data-game="Memory">
                 <img src="./img/memory-game.jpg">
                 <div class="grid-item1"><h2>Memory</h2></div>
             </section>
@@ -52,6 +46,6 @@
             <div class="description"><h4>A game of Snake</h4></div>
          </a>
       </div>
-
+    <?php session(); ?>
 </body>
 </html>

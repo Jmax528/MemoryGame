@@ -14,10 +14,10 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <h2 class="navbar-brand">Sleepless Games Register</h2>
         <div class="buttons">
-            <a class="buttonHome" href="../index.html" >
+            <a class="buttonHome" href="../index.php" >
                 <button class="homeButton">Home</button>
             </a>
-            <a class="button2" href="./login.html">
+            <a class="button2" href="loginPage.php">
                 <button class="registerButton">Login</button>
             </a>
         </div>
